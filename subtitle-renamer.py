@@ -69,7 +69,7 @@ def rename_subtitles(video_dir, dry_run=True):
 # Example usage
 if __name__ == "__main__":
     # Use raw string for the path to handle special characters
-    video_directory = r"/home/wolkenkind/Downloads/Creature.Commandos.Season.1.COMPLETE.720p.AMZN.WEB-DL.x264.ESubs.[1.3GB].[MP4].[S01.Full]-[y2flix]"
+    video_directory = r"direction of the folder where your videos and subtitles are located"
     
     # First run in dry-run mode to preview changes
     print("Preview of changes (dry run):")
