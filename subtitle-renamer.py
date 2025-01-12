@@ -73,7 +73,7 @@ if __name__ == "__main__":
     
     # First run in dry-run mode to preview changes
     print("Preview of changes (dry run):")
-    rename_subtitles(video_directory, dry_run=False)
+    rename_subtitles(video_directory, dry_run=True)
     
     # Uncomment and run again to actually perform the renaming
     # print("\nPerforming actual renaming:")
