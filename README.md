@@ -23,6 +23,7 @@ Usage
 bash
 
 git clone https://github.com/yourusername/subtitle-renamer.git
+
 cd subtitle-renamer
 
 Place your subtitle files in the same directory as the script or specify the path in the script.
