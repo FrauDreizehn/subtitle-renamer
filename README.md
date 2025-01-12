@@ -6,10 +6,10 @@ The Subtitle Renamer is a Python script designed to help users organize and rena
 
 Features
 
-    Batch Renaming: Rename multiple subtitle files in a single run.
-    Custom Naming Convention: Specify a naming pattern that includes the base name of the video file.
-    File Type Support: Supports common subtitle file formats such as .srt and .sub.
-    Error Handling: Gracefully handles errors such as missing files or incorrect formats.
+Batch Renaming: Rename multiple subtitle files in a single run.
+Custom Naming Convention: Specify a naming pattern that includes the base name of the video file.
+File Type Support: Supports common subtitle file formats such as .srt and .sub.
+Error Handling: Gracefully handles errors such as missing files or incorrect formats.
 
 Requirements
 
@@ -18,13 +18,10 @@ Requirements
 
 Usage
 
-    Clone the repository:
-
-bash
-
-git clone https://github.com/yourusername/subtitle-renamer.git
-
-cd subtitle-renamer
+    Clone the repository: 
+    
+    git clone https://github.com/yourusername/subtitle-renamer.git 
+    cd subtitle-renamer
 
 Place your subtitle files in the same directory as the script or specify the path in the script.
 
