@@ -23,7 +23,28 @@ Usage
     git clone https://github.com/yourusername/subtitle-renamer.git 
     cd subtitle-renamer
 
-Place your subtitle files in the same directory as the script or specify the path in the script.
+You can use the script in several ways:
+
+1. From the directory containing the videos:
+```bash
+python rename_subtitles.py
+```
+
+2. Specify a different directory:
+```bash
+python rename_subtitles.py "/path/to/your/videos"
+```
+
+3. When you're ready to actually rename the files, add --execute:
+```bash
+python rename_subtitles.py "/path/to/your/videos" --execute
+```
+
+The script will:
+- By default, use the current directory if no path is specified
+- Always show a preview first unless --execute is used
+- Handle spaces and special characters in the path automatically
+
 
 Run the script:
 
