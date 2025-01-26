@@ -2,6 +2,7 @@ import os
 from difflib import SequenceMatcher
 import re
 from pathlib import Path
+import argparse
 
 def clean_filename(filename):
     """Remove common patterns and clean filename for better matching."""
@@ -66,15 +67,20 @@ def rename_subtitles(video_dir, dry_run=True):
             except OSError as e:
                 print(f"Error renaming {srt}: {e}")
 
-# Example usage
 if __name__ == "__main__":
-    # Use raw string for the path to handle special characters
-    video_directory = r"direction of the folder where your videos and subtitles are located"
+    parser = argparse.ArgumentParser(description='Rename subtitle files to match video filenames.')
+    parser.add_argument('directory', nargs='?', default='.', 
+                       help='Directory containing the video and subtitle files (default: current directory)')
+    parser.add_argument('--execute', action='store_true',
+                       help='Execute the renaming (without this flag, will only show preview)')
     
-    # First run in dry-run mode to preview changes
-    print("Preview of changes (dry run):")
-    rename_subtitles(video_directory, dry_run=True)
+    args = parser.parse_args()
     
-    # Uncomment and run again to actually perform the renaming
-    # print("\nPerforming actual renaming:")
-    # rename_subtitles(video_directory, dry_run=False)
+    # First run in preview mode
+    if not args.execute:
+        print("Preview of changes (dry run):")
+        rename_subtitles(args.directory, dry_run=True)
+        print("\nTo perform the actual renaming, run the script with --execute")
+    else:
+        print("Performing actual renaming:")
+        rename_subtitles(args.directory, dry_run=False)
